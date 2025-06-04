@@ -234,6 +234,26 @@ The document class automatically selects the correct path based on the target.
 
 Multiple bibliography styles are supported in `bibliography/styles/`. The system automatically selects appropriate styles based on the target format.
 
+### Cleaning Build Artifacts
+
+Use the included cleanup script to remove LaTeX build artifacts:
+
+```bash
+# Clean main directory only
+./clean-latex.sh
+
+# Clean all directories including examples
+./clean-latex.sh --all
+
+# Preview what would be cleaned
+./clean-latex.sh --dry-run --all
+
+# Show help
+./clean-latex.sh --help
+```
+
+The script removes common LaTeX artifacts like `.aux`, `.log`, `.out`, `.bbl`, `.blg`, `.toc`, and many others.
+
 ## Advanced Features
 
 ### Build System Options
