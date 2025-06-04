@@ -1,0 +1,147 @@
+\section{Results}
+\label{sec:results}
+
+This section presents the experimental results and analysis of our proposed approach. We organize the results by experimental scenario and provide comprehensive comparisons with baseline methods.
+
+\subsection{Overall Performance}
+\label{subsec:overall_performance}
+
+Table~\ref{tab:overall_results} summarizes the performance of our method compared to baseline approaches across all datasets.
+
+\begin{table}[htbp]
+\centering
+\caption{Overall performance comparison across all datasets. Best results are shown in \textbf{bold}, second-best are \underline{underlined}.}
+\label{tab:overall_results}
+\begin{tabular}{lccc}
+\toprule
+Method & Metric 1 & Metric 2 & Metric 3 \\
+\midrule
+Baseline 1 & $0.85 \pm 0.02$ & $0.72 \pm 0.03$ & $0.68 \pm 0.04$ \\
+Baseline 2 & $\underline{0.89 \pm 0.01}$ & $0.75 \pm 0.02$ & $\underline{0.71 \pm 0.02}$ \\
+Baseline 3 & $0.87 \pm 0.03$ & $\underline{0.78 \pm 0.02}$ & $0.69 \pm 0.03$ \\
+\textbf{Ours} & $\mathbf{0.93 \pm 0.01}$ & $\mathbf{0.81 \pm 0.01}$ & $\mathbf{0.74 \pm 0.02}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Our method achieves the best performance across all metrics, with improvements of [X\%] in Metric 1, [Y\%] in Metric 2, and [Z\%] in Metric 3 compared to the best baseline.
+
+\subsection{Dataset-Specific Analysis}
+\label{subsec:dataset_analysis}
+
+\subsubsection{Dataset 1 Results}
+
+\figref{fig:dataset1_results} shows the performance trends on Dataset 1. Our method demonstrates consistent improvements across different parameter settings.
+
+\begin{figure}[htbp]
+\centering
+% Placeholder for actual figure
+\fbox{\parbox{0.8\textwidth}{\centering [Figure: Dataset 1 Results]\\ Performance comparison showing convergence curves and final results}}
+\caption{Results on Dataset 1. (a) Convergence curves for different methods. (b) Performance vs. parameter sensitivity. Our method shows faster convergence and better final performance.}
+\label{fig:dataset1_results}
+\end{figure}
+
+Key observations:
+\begin{itemize}
+    \item Our method converges [X] times faster than the best baseline
+    \item Final performance is [Y\%] better than the previous state-of-the-art
+    \item The method shows robust performance across different parameter settings
+\end{itemize}
+
+\subsubsection{Dataset 2 Results}
+
+For Dataset 2, which presents unique challenges due to [specific characteristics], our approach maintains its superior performance.
+
+\begin{table}[htbp]
+\centering
+\caption{Detailed results on Dataset 2 across different experimental conditions.}
+\label{tab:dataset2_results}
+\begin{tabular}{lcccc}
+\toprule
+Condition & Baseline 1 & Baseline 2 & Baseline 3 & \textbf{Ours} \\
+\midrule
+Condition A & $0.82$ & $0.86$ & $0.84$ & $\mathbf{0.91}$ \\
+Condition B & $0.79$ & $0.83$ & $0.81$ & $\mathbf{0.88}$ \\
+Condition C & $0.76$ & $0.80$ & $0.78$ & $\mathbf{0.85}$ \\
+\midrule
+Average & $0.79$ & $0.83$ & $0.81$ & $\mathbf{0.88}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{Ablation Study}
+\label{subsec:ablation}
+
+To understand the contribution of different components, we conduct an ablation study removing key elements of our approach.
+
+\begin{table}[htbp]
+\centering
+\caption{Ablation study results. Each row shows the impact of removing a specific component.}
+\label{tab:ablation}
+\begin{tabular}{lcc}
+\toprule
+Configuration & Metric 1 & Metric 2 \\
+\midrule
+Full Method & $\mathbf{0.93}$ & $\mathbf{0.81}$ \\
+w/o Component A & $0.89$ & $0.78$ \\
+w/o Component B & $0.91$ & $0.79$ \\
+w/o Component C & $0.87$ & $0.76$ \\
+w/o Components A+B & $0.85$ & $0.74$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The ablation study reveals that:
+\begin{itemize}
+    \item Component A contributes [X\%] to overall performance
+    \item Component B provides [Y\%] improvement 
+    \item Component C is critical for [specific aspect]
+    \item The combination of all components yields synergistic effects
+\end{itemize}
+
+\subsection{Computational Analysis}
+\label{subsec:computational}
+
+\subsubsection{Runtime Performance}
+
+\figref{fig:runtime_analysis} compares the computational efficiency of different methods.
+
+\begin{figure}[htbp]
+\centering
+% Placeholder for actual figure
+\fbox{\parbox{0.8\textwidth}{\centering [Figure: Runtime Analysis]\\ Comparison of execution times and scalability across different problem sizes}}
+\caption{Computational performance analysis. (a) Runtime vs. problem size. (b) Memory usage comparison. Our method scales linearly with problem size.}
+\label{fig:runtime_analysis}
+\end{figure}
+
+\subsubsection{Scalability Analysis}
+
+Our method demonstrates excellent scalability properties:
+\begin{itemize}
+    \item Linear time complexity in practice
+    \item Constant memory overhead
+    \item Effective parallelization with [X] speedup on [Y] cores
+\end{itemize}
+
+\subsection{Statistical Significance}
+\label{subsec:statistical}
+
+All reported improvements are statistically significant. We conducted [statistical test] with $p < 0.05$ for all comparisons. The effect sizes (Cohen's d) are:
+\begin{itemize}
+    \item vs. Baseline 1: $d = 1.24$ (large effect)
+    \item vs. Baseline 2: $d = 0.89$ (large effect)  
+    \item vs. Baseline 3: $d = 1.07$ (large effect)
+\end{itemize}
+
+\subsection{Sensitivity Analysis}
+\label{subsec:sensitivity}
+
+We evaluate the sensitivity of our method to key parameters:
+
+\begin{enumerate}
+    \item \textbf{Learning Rate ($\alpha$):} Stable performance for $\alpha \in [10^{-4}, 10^{-2}]$
+    \item \textbf{Regularization ($\lambda$):} Optimal range $\lambda \in [10^{-4}, 10^{-2}]$
+    \item \textbf{Batch Size:} Linear scaling with batch size up to [limit]
+\end{enumerate}
+
+The method shows robust performance across reasonable parameter ranges, indicating practical applicability.

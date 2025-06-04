@@ -1,0 +1,133 @@
+%% journal-config.tex
+%% Configuration settings optimized for journal submissions
+%% Part of the Saucedo arXiv Manuscript System
+
+%% Page geometry for journal format
+\geometry{
+    a4paper,
+    margin=0.75in,
+    top=1in,
+    bottom=1.25in,
+    includeheadfoot,
+    twoside
+}
+
+%% Typography settings for journal quality
+\setlength{\parindent}{0.25in}
+\setlength{\parskip}{0pt}
+\setlength{\columnsep}{0.25in}
+
+%% Figure settings for high-resolution output
+\renewcommand{\maxfigwidth}{0.7\textwidth}
+\graphicspath{{figures/high-res/}}
+
+%% Professional header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\small\thepage}
+\fancyhead[LO]{\small\rightmark}
+\fancyhead[RE]{\small\leftmark}
+\renewcommand{\headrulewidth}{0.5pt}
+\fancyfoot{}
+
+%% Conservative hyperref settings for journal
+\hypersetup{
+    colorlinks=false,
+    linkcolor=black,
+    citecolor=black,
+    urlcolor=black,
+    filecolor=black,
+    pdfborder={0 0 0},
+    bookmarksnumbered=false,
+    bookmarksopen=false
+}
+
+%% Theorem environments for journal format
+\newtheoremstyle{journaltheorem}
+    {9pt}   % Space above
+    {9pt}   % Space below
+    {\itshape} % Body font
+    {0pt}   % Indent amount
+    {\bfseries} % Theorem head font
+    {.}     % Punctuation after theorem head
+    {.75em} % Space after theorem head
+    {}      % Theorem head spec
+
+\theoremstyle{journaltheorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newtheoremstyle{journaldefinition}
+    {9pt}   % Space above
+    {9pt}   % Space below
+    {\normalfont} % Body font
+    {0pt}   % Indent amount
+    {\bfseries} % Theorem head font
+    {.}     % Punctuation after theorem head
+    {.75em} % Space after theorem head
+    {}      % Theorem head spec
+
+\theoremstyle{journaldefinition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+%% Strict equation formatting for journals
+\allowdisplaybreaks[1]
+\numberwithin{equation}{section}
+
+%% Bibliography style for journals (can be overridden)
+\bibliographystyle{unsrt}
+
+%% No line numbering in final journal version
+% Line numbering can be enabled in draft mode
+
+%% Minimal table of contents
+\setcounter{tocdepth}{1}
+\setcounter{secnumdepth}{3}
+
+%% Professional figure and table captions
+\captionsetup{
+    font=small,
+    labelfont=bf,
+    margin=5pt,
+    justification=justified,
+    singlelinecheck=true,
+    skip=6pt
+}
+
+%% Conservative cross-referencing
+\newcommand{\figref}[1]{Fig.~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\eqref}[1]{(\ref{#1})}
+\newcommand{\secref}[1]{Sec.~\ref{#1}}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
+
+%% Journal-specific spacing
+\onehalfspacing % Can be changed to \singlespacing or \doublespacing
+
+%% Tight list spacing for journals
+\setlist{nosep}
+
+%% Professional footnote formatting
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\setlength{\footnotesep}{0.5em}
+\renewcommand{\footnoterule}{\vspace*{-3pt}\hrule width 2in height 0.4pt \vspace*{2.6pt}}
+
+%% Enhanced float placement for journals
+\renewcommand{\topfraction}{0.9}
+\renewcommand{\bottomfraction}{0.8}
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}
+\renewcommand{\dbltopfraction}{0.9}
+\setcounter{dbltopnumber}{2}
+\renewcommand{\textfraction}{0.07}
+\renewcommand{\floatpagefraction}{0.7}
+\renewcommand{\dblfloatpagefraction}{0.7}
+
+%% Suppress draft watermarks in journal mode
+% No watermarks for journal submissions

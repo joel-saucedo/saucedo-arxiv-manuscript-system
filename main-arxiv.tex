@@ -1,0 +1,105 @@
+%% main-arxiv.tex
+%% arXiv-optimized manuscript template
+%% Part of the Saucedo arXiv Manuscript System
+
+\documentclass[arxiv,final,oneside,onecolumn]{arxiv-preprint}
+
+% Load shared packages
+\input{config/shared-packages}
+
+% Load arXiv-specific configuration
+\input{config/arxiv-config}
+
+% Metadata
+\title{Your Manuscript Title: Optimized for arXiv Submission}
+
+\author{%
+    First Author\thanks{Corresponding author: first.author@university.edu}\\
+    \small Department of Physics, University Name\\
+    \small City, State, Country\\
+    \and
+    Second Author\\
+    \small Department of Mathematics, Another University\\
+    \small City, State, Country
+}
+
+\date{\today}
+
+% arXiv-specific metadata
+\arxivonly{
+    \usepackage{hyperref}
+    \hypersetup{
+        pdftitle={Your Manuscript Title},
+        pdfauthor={First Author, Second Author},
+        pdfsubject={Physics, Mathematics},
+        pdfkeywords={keyword1, keyword2, keyword3}
+    }
+}
+
+\begin{document}
+
+% Title and metadata
+\maketitle
+
+% Abstract
+\begin{abstract}
+\input{content/abstract}
+\end{abstract}
+
+% Keywords (arXiv style)
+\arxivonly{
+    \noindent\textbf{Keywords:} keyword1, keyword2, keyword3, keyword4
+    \vspace{0.5em}
+}
+
+% arXiv preprint notice
+\arxivonly{
+    \begin{center}
+        \fbox{\parbox{0.9\textwidth}{
+            \centering\small
+            \textbf{Preprint Notice:} This is a preprint submitted to arXiv. 
+            The manuscript may be under review or accepted for publication elsewhere.
+        }}
+    \end{center}
+    \vspace{1em}
+}
+
+% Table of contents for longer papers
+\ifthenelse{\pageref{LastPage} > 15}{
+    \tableofcontents
+    \newpage
+}{}
+
+% Main content
+\input{content/introduction}
+\input{content/methodology}
+\input{content/results}
+\input{content/discussion}
+\input{content/conclusion}
+
+% Acknowledgments
+\section*{Acknowledgments}
+The authors thank the anonymous reviewers for their valuable comments and suggestions. 
+This work was supported by [funding information].
+
+% References
+\bibliographystyle{unsrt}
+\bibliography{bibliography/refs}
+
+% Appendices
+\appendix
+\input{content/appendix}
+
+% arXiv-specific footer information
+\arxivonly{
+    \vspace{2em}
+    \hrule
+    \vspace{0.5em}
+    \small
+    \noindent\textbf{arXiv Information:}\\
+    Submitted: \today\\
+    Primary Class: [physics.class-ph]\\
+    Secondary Classes: [math-ph, cond-mat.other]
+}
+
+\end{document}

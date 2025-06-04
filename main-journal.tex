@@ -1,0 +1,102 @@
+%% main-journal.tex
+%% Journal-optimized manuscript template
+%% Part of the Saucedo arXiv Manuscript System
+
+\documentclass[journal,final,twoside,onecolumn]{arxiv-preprint}
+
+% Load shared packages
+\input{config/shared-packages}
+
+% Load journal-specific configuration
+\input{config/journal-config}
+
+% Journal-specific packages (can be customized per journal)
+\journalonly{
+    % Add journal-specific packages here
+    % \usepackage{natbib}  % For Nature journals
+    % \usepackage{achemso}  % For ACS journals
+}
+
+% Metadata
+\title{Your Manuscript Title: Formatted for Journal Submission}
+
+\author{%
+    First Author\thanks{Corresponding author: first.author@university.edu}\\
+    \small Department of Physics, University Name\\
+    \small City, State, Country\\
+    \and
+    Second Author\\
+    \small Department of Mathematics, Another University\\
+    \small City, State, Country
+}
+
+\date{\today}
+
+% Journal-specific metadata
+\journalonly{
+    \usepackage{hyperref}
+    \hypersetup{
+        pdftitle={Your Manuscript Title},
+        pdfauthor={First Author, Second Author},
+        colorlinks=false,
+        pdfborder={0 0 0}
+    }
+}
+
+\begin{document}
+
+% Title and metadata
+\maketitle
+
+% Abstract
+\begin{abstract}
+\input{content/abstract}
+\end{abstract}
+
+% Keywords (journal style)
+\journalonly{
+    \noindent\textbf{Keywords:} keyword1; keyword2; keyword3; keyword4
+    \vspace{1em}
+}
+
+% Main content
+\input{content/introduction}
+\input{content/methodology}
+\input{content/results}
+\input{content/discussion}
+\input{content/conclusion}
+
+% Acknowledgments
+\section*{Acknowledgments}
+The authors thank the anonymous reviewers for their valuable comments and suggestions. 
+This work was supported by [funding information]. 
+
+% Conflict of interest statement
+\journalonly{
+    \section*{Conflict of Interest}
+    The authors declare no conflict of interest.
+}
+
+% Author contributions
+\journalonly{
+    \section*{Author Contributions}
+    F.A. conceived the study and wrote the manuscript. S.A. performed the analysis 
+    and contributed to the writing. All authors reviewed and approved the final manuscript.
+}
+
+% Data availability
+\journalonly{
+    \section*{Data Availability}
+    The data that support the findings of this study are available from the 
+    corresponding author upon reasonable request.
+}
+
+% References
+\bibliographystyle{unsrt}  % Can be changed per journal requirements
+\bibliography{bibliography/refs}
+
+% Appendices
+\appendix
+\input{content/appendix}
+
+\end{document}

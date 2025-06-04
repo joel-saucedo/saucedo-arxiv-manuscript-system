@@ -1,0 +1,124 @@
+%% arxiv-config.tex
+%% Configuration settings optimized for arXiv preprints
+%% Part of the Saucedo arXiv Manuscript System
+
+%% Page geometry for arXiv
+\geometry{
+    letterpaper,
+    margin=1in,
+    top=1.25in,
+    bottom=1.25in,
+    includeheadfoot
+}
+
+%% Typography settings for readability
+\setlength{\parindent}{0.2in}
+\setlength{\parskip}{0.1em}
+\setlength{\columnsep}{0.2in}
+
+%% Figure settings for arXiv size limits
+\renewcommand{\maxfigwidth}{0.9\textwidth}
+\graphicspath{{figures/compressed/}}
+
+%% Header and footer for arXiv mode
+\if@draftmode
+    \usepackage{fancyhdr}
+    \pagestyle{fancy}
+    \fancyhf{}
+    \fancyhead[L]{\small arXiv Preprint}
+    \fancyhead[R]{\small \today}
+    \fancyfoot[C]{\thepage}
+    \renewcommand{\headrulewidth}{0.4pt}
+\else
+    \pagestyle{plain}
+\fi
+
+%% Enhanced hyperref settings for arXiv
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    citecolor=red,
+    urlcolor=blue,
+    filecolor=magenta,
+    pdfborder={0 0 0},
+    bookmarksnumbered=true,
+    bookmarksopen=true,
+    bookmarksopenlevel=1,
+    pdfstartview=FitH,
+    pdfpagemode=UseOutlines
+}
+
+%% Theorem environments optimized for single column
+\newtheoremstyle{arxivtheorem}
+    {6pt}   % Space above
+    {6pt}   % Space below
+    {\itshape} % Body font
+    {0pt}   % Indent amount
+    {\bfseries} % Theorem head font
+    {.}     % Punctuation after theorem head
+    {.5em}  % Space after theorem head
+    {}      % Theorem head spec
+
+\theoremstyle{arxivtheorem}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+
+\newtheoremstyle{arxivdefinition}
+    {6pt}   % Space above
+    {6pt}   % Space below
+    {\normalfont} % Body font
+    {0pt}   % Indent amount
+    {\bfseries} % Theorem head font
+    {.}     % Punctuation after theorem head
+    {.5em}  % Space after theorem head
+    {}      % Theorem head spec
+
+\theoremstyle{arxivdefinition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+
+%% Enhanced equation formatting
+\allowdisplaybreaks[3]
+\numberwithin{equation}{section}
+
+%% Bibliography style for arXiv
+\bibliographystyle{unsrt}
+
+%% Line numbering for draft mode
+\if@draftmode
+    \usepackage{lineno}
+    \linenumbers
+    \setlength\linenumbersep{3pt}
+    \renewcommand\linenumberfont{\normalfont\scriptsize\sffamily\color{gray}}
+\fi
+
+%% Table of contents depth for longer manuscripts
+\setcounter{tocdepth}{2}
+\setcounter{secnumdepth}{3}
+
+%% Figure and table caption formatting
+\captionsetup{
+    font=small,
+    labelfont=bf,
+    margin=10pt,
+    justification=justified,
+    singlelinecheck=false
+}
+
+%% Enhanced cross-referencing
+\newcommand{\figref}[1]{Figure~\ref{#1}}
+\newcommand{\tabref}[1]{Table~\ref{#1}}
+\newcommand{\eqref}[1]{Equation~(\ref{#1})}
+\newcommand{\secref}[1]{Section~\ref{#1}}
+\newcommand{\appref}[1]{Appendix~\ref{#1}}
+
+%% Preprint watermark (if draft mode)
+\if@draftmode
+    \usepackage{draftwatermark}
+    \SetWatermarkText{PREPRINT}
+    \SetWatermarkScale{0.8}
+    \SetWatermarkColor[gray]{0.9}
+\fi

@@ -1,0 +1,107 @@
+%% main-preprint.tex
+%% Preprint manuscript template with draft features
+%% Part of the Saucedo arXiv Manuscript System
+
+\documentclass[arxiv,draft,oneside,onecolumn]{arxiv-preprint}
+
+% Load shared packages
+\input{config/shared-packages}
+
+% Load arXiv-specific configuration
+\input{config/arxiv-config}
+
+% Metadata
+\title{Your Manuscript Title: Preprint Version with Draft Features}
+
+\author{%
+    First Author\thanks{Corresponding author: first.author@university.edu}\\
+    \small Department of Physics, University Name\\
+    \small City, State, Country\\
+    \and
+    Second Author\\
+    \small Department of Mathematics, Another University\\
+    \small City, State, Country
+}
+
+\date{\today}
+
+% Draft-specific settings
+\draftonly{
+    \usepackage{hyperref}
+    \hypersetup{
+        pdftitle={Your Manuscript Title - DRAFT},
+        pdfauthor={First Author, Second Author},
+        pdfsubject={Physics, Mathematics - DRAFT VERSION},
+        pdfkeywords={draft, preprint, keyword1, keyword2}
+    }
+}
+
+\begin{document}
+
+% Title and metadata
+\maketitle
+
+% Draft notice
+\draftonly{
+    \begin{center}
+        \fbox{\parbox{0.9\textwidth}{
+            \centering\large\bfseries\color{red}
+            DRAFT VERSION - NOT FOR DISTRIBUTION\\
+            \normalsize\normalfont\color{black}
+            This is a draft manuscript prepared for internal review.\\
+            Line numbers are included for reviewer convenience.\\
+            Compiled on: \today
+        }}
+    \end{center}
+    \vspace{1em}
+}
+
+% Abstract
+\begin{abstract}
+\input{content/abstract}
+\end{abstract}
+
+% Keywords
+\noindent\textbf{Keywords:} keyword1, keyword2, keyword3, keyword4
+\vspace{0.5em}
+
+% Table of contents for draft review
+\draftonly{
+    \tableofcontents
+    \newpage
+}
+
+% Main content
+\input{content/introduction}
+\input{content/methodology}
+\input{content/results}
+\input{content/discussion}
+\input{content/conclusion}
+
+% Acknowledgments
+\section*{Acknowledgments}
+The authors thank the anonymous reviewers for their valuable comments and suggestions. 
+This work was supported by [funding information].
+
+% References
+\bibliographystyle{unsrt}
+\bibliography{bibliography/refs}
+
+% Appendices
+\appendix
+\input{content/appendix}
+
+% Draft footer with build information
+\draftonly{
+    \vspace{2em}
+    \hrule
+    \vspace{0.5em}
+    \small
+    \noindent\textbf{Draft Information:}\\
+    Build Date: \today\\
+    Git Commit: \gitAbbrevHash\\
+    Total Pages: \pageref{LastPage}\\
+    \textbf{Status:} Under Review - Comments Welcome
+}
+
+\end{document}

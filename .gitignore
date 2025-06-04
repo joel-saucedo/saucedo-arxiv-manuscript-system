@@ -1,0 +1,117 @@
+# LaTeX artifacts
+*.aux
+*.bbl
+*.bcf
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.run.xml
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.lol
+*.idx
+*.ind
+*.ilg
+*.glo
+*.gls
+*.glg
+*.acn
+*.acr
+*.alg
+*.glsdefs
+*.nav
+*.snm
+*.vrb
+*.figlist
+*.makefile
+*.fls
+*.figlist
+*.makefile
+
+# Build directories
+build/
+output/
+temp/
+
+# Editor artifacts
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Git artifacts
+.gitattributes
+
+# Backup files
+*.backup
+*.bak
+*.orig
+
+# PDF outputs (comment out if you want to track PDFs)
+*.pdf
+
+# Bibliography artifacts
+*.bib.bak
+*.bib.sav
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+
+# Archive files
+*.zip
+*.tar.gz
+*.rar
+
+# Cache directories
+cache/
+.cache/
+
+# Node modules (if using any JS tools)
+node_modules/
+
+# Python cache (if using Python scripts)
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/
+ENV/
+
+# LaTeX specific
+*.figlist
+*.makefile
+*.listing
+*.lol
+*.maf
+*.mtc
+*.mtc0
+*.brf
+*.end
+*.eledsec*
+*.loa
+*.mw
+*.nlg
+*.nlo
+*.nls
+*.thm
+*.wrt
+*.auxlock
