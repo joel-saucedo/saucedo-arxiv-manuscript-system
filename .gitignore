@@ -30,7 +30,7 @@
 *.makefile
 
 # PDF outputs (comment out if you want to track PDFs)
-main-*.pdf
+# main-*.pdf
 
 # Build directories and temporary files
 build/*.aux

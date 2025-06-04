@@ -2,15 +2,15 @@
 
 A sophisticated LaTeX document class and workflow system for dual-target academic publishing, optimized for both journal submissions and arXiv preprints.
 
-## ✅ Current Status - FULLY WORKING
+## Current Status - FULLY WORKING
 
 This system has been recently updated and all core functionality is operational:
-- ✅ All three manuscript formats compile successfully
-- ✅ Clean, minimal document class (`arxiv-preprint-simple.cls`)
-- ✅ Robust build system with simple workflow
-- ✅ Complete content structure and examples
+- All three manuscript formats compile successfully
+- Clean, minimal document class (`arxiv-preprint-simple.cls`)
+- Robust build system with simple workflow
+- Complete content structure and examples
 
-## 🚀 Quick Start
+## Quick Start
 
 ```bash
 # Clone the repository
@@ -31,7 +31,7 @@ pdflatex main-preprint.tex   # Preprint/draft version
 - `main-journal.pdf` - Journal submission format
 - `main-preprint.pdf` - Draft version with review features
 
-## 🚀 Features
+## Features
 
 ### Core Capabilities
 - **Dual-Target System**: Generate both journal and arXiv versions from the same source
@@ -47,7 +47,7 @@ pdflatex main-preprint.tex   # Preprint/draft version
 - **Version Control Integration**: Automatic Git information embedding
 - **Comprehensive Build Tools**: Makefile and shell scripts for automation
 
-## 📁 Structure
+## Structure
 
 ```
 saucedo-arxiv-manuscript-system/
@@ -80,7 +80,7 @@ saucedo-arxiv-manuscript-system/
 └── examples/               # Example papers
 ```
 
-## 🛠 Quick Start
+## Quick Start
 
 ### Prerequisites
 - LaTeX distribution (TeX Live, MiKTeX, or MacTeX)
@@ -134,7 +134,7 @@ make arxiv-package
 make clean
 ```
 
-## 📝 Document Class Usage
+## Document Class Usage
 
 ### Basic Document Setup
 
@@ -203,7 +203,7 @@ The system provides smart cross-referencing commands:
 \appref{app:proofs}     % → Appendix A
 ```
 
-## 🎨 Customization
+## Customization
 
 ### Journal-Specific Adaptations
 
@@ -234,7 +234,7 @@ The document class automatically selects the correct path based on the target.
 
 Multiple bibliography styles are supported in `bibliography/styles/`. The system automatically selects appropriate styles based on the target format.
 
-## 🔧 Advanced Features
+## Advanced Features
 
 ### Build System Options
 
@@ -271,7 +271,7 @@ Generate multiple formats simultaneously:
 make all  # Builds arxiv, journal, and preprint versions
 ```
 
-## 📊 Examples
+## Examples
 
 The `examples/` directory contains complete example papers demonstrating:
 - Physics paper with complex equations
@@ -279,7 +279,7 @@ The `examples/` directory contains complete example papers demonstrating:
 - Multi-author collaboration setup
 - Conference paper adaptation
 
-## 🤝 Contributing
+## Contributing
 
 Contributions are welcome! Please see our contribution guidelines:
 
@@ -298,29 +298,29 @@ cd saucedo-arxiv-manuscript-system
 ./build/build.sh all --verbose
 ```
 
-## 📄 License
+## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - Inspired by modern academic publishing workflows
 - Built on the robust LaTeX ecosystem
 - Community feedback and contributions
 
-## 📚 Documentation
+## Documentation
 
 For detailed documentation, see:
 - [User Guide](docs/user-guide.md)
 - [Class Documentation](docs/class-documentation.md)
 - [Workflow Examples](docs/workflow-examples.md)
 
-## 🐛 Issues and Support
+## Issues and Support
 
 - Report issues on [GitHub Issues](https://github.com/joel-saucedo/saucedo-arxiv-manuscript-system/issues)
 - For questions, use [GitHub Discussions](https://github.com/joel-saucedo/saucedo-arxiv-manuscript-system/discussions)
 
-## 🔗 Related Projects
+## Related Projects
 
 - [arXiv submission guidelines](https://arxiv.org/help/submit)
 - [Journal formatting requirements](https://www.latex-project.org/)
