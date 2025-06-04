@@ -2,7 +2,7 @@
 %% arXiv-optimized manuscript template
 %% Part of the Saucedo arXiv Manuscript System
 
-\documentclass[arxiv,final,oneside,onecolumn]{arxiv-preprint}
+\documentclass[arxiv,final,oneside,onecolumn]{arxiv-preprint-simple}
 
 % Load shared packages
 \input{config/shared-packages}
@@ -13,15 +13,7 @@
 % Metadata
 \title{Your Manuscript Title: Optimized for arXiv Submission}
 
-\author{%
-    First Author\thanks{Corresponding author: first.author@university.edu}\\
-    \small Department of Physics, University Name\\
-    \small City, State, Country\\
-    \and
-    Second Author\\
-    \small Department of Mathematics, Another University\\
-    \small City, State, Country
-}
+\author{First Author \and Second Author}
 
 \date{\today}
 
@@ -63,12 +55,6 @@
     \end{center}
     \vspace{1em}
 }
-
-% Table of contents for longer papers
-\ifthenelse{\pageref{LastPage} > 15}{
-    \tableofcontents
-    \newpage
-}{}
 
 % Main content
 \input{content/introduction}

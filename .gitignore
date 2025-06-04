@@ -1,4 +1,4 @@
-# LaTeX artifacts
+# LaTeX build artifacts
 *.aux
 *.bbl
 *.bcf
@@ -28,16 +28,25 @@
 *.vrb
 *.figlist
 *.makefile
-*.fls
-*.figlist
-*.makefile
 
-# Build directories
-build/
-output/
+# PDF outputs (comment out if you want to track PDFs)
+main-*.pdf
+
+# Build directories and temporary files
+build/*.aux
+build/*.bbl
+build/*.blg
+build/*.log
+build/*.out
+build/*.pdf
+build/*.toc
+build/*.synctex.gz
+build/temp/
+build/output/
 temp/
+output/
 
-# Editor artifacts
+# Editor and OS artifacts
 .vscode/
 .idea/
 *.swp
@@ -46,8 +55,23 @@ temp/
 .DS_Store
 Thumbs.db
 
-# Git artifacts
-.gitattributes
+# Backup files
+*.bak
+*.backup
+*~
+
+# Archive files
+*.zip
+*.tar.gz
+*.tar.bz2
+
+# Python cache (for scripts)
+__pycache__/
+*.pyc
+*.pyo
+
+# Node modules (if using any JS tools)
+node_modules/
 
 # Backup files
 *.backup

@@ -1,124 +1,57 @@
-%% shared-packages.tex
-%% Common packages used across all manuscript variants
+%% shared-packages-clean.tex
+%% Minimal working packages for testing
 %% Part of the Saucedo arXiv Manuscript System
 
 %% Essential encoding and fonts
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-\usepackage{lmodern}
 
 %% Mathematics packages
 \usepackage{amsmath,amsfonts,amssymb}
 \usepackage{amsthm}
-\usepackage{mathtools}
-\usepackage{bm}
-\usepackage{bbm}
 
 %% Graphics and figures
 \usepackage{graphicx}
 \usepackage{subcaption}
-\usepackage{float}
-\usepackage{wrapfig}
-\usepackage{tikz}
-\usetikzlibrary{arrows,positioning,shapes}
 
 %% Tables and arrays
 \usepackage{array}
 \usepackage{booktabs}
-\usepackage{longtable}
-\usepackage{multirow}
-\usepackage{tabularx}
 
 %% Text formatting and layout
 \usepackage{geometry}
-\usepackage{setspace}
-\usepackage{parskip}
-\usepackage{enumitem}
-\usepackage{textcomp}
 
 %% Cross-referencing and citations
 \usepackage{hyperref}
-\usepackage{cleveref}
-\usepackage{url}
-\usepackage{doi}
+\usepackage{natbib}
 
 %% Colors
 \usepackage{xcolor}
-\definecolor{darkblue}{rgb}{0,0,0.5}
-\definecolor{darkgreen}{rgb}{0,0.5,0}
-\definecolor{darkred}{rgb}{0.5,0,0}
 
 %% Page layout and headers
 \usepackage{fancyhdr}
-\usepackage{lastpage}
 
 %% Caption formatting
 \usepackage{caption}
 
-%% Units and scientific notation
-\usepackage{siunitx}
-\sisetup{
-    separate-uncertainty=true,
-    multi-part-units=single,
-    bracket-numbers=false
-}
-
-%% Algorithms (if needed)
-\usepackage{algorithm}
-\usepackage{algorithmic}
-
-%% Code listings (if needed)
-\usepackage{listings}
-\lstset{
-    basicstyle=\ttfamily\small,
-    breaklines=true,
-    frame=single,
-    numbers=left,
-    numberstyle=\tiny,
-    stepnumber=1
-}
-
-%% Chemical formulas (if needed)
-\usepackage{chemfig}
-\usepackage{mhchem}
-
-%% Version control integration
-\usepackage{gitinfo2}
-
 %% Conditional compilation
 \usepackage{ifthen}
-\usepackage{etoolbox}
-
-%% Advanced referencing
-\crefname{equation}{Eq.}{Eqs.}
-\crefname{figure}{Fig.}{Figs.}
-\crefname{table}{Table}{Tables}
-\crefname{section}{Sec.}{Secs.}
-\crefname{appendix}{App.}{Apps.}
 
 %% Custom commands for conditional content
-\newcommand{\journalonly}[1]{\if@journalmode#1\fi}
-\newcommand{\arxivonly}[1]{\if@arxivmode#1\fi}
-\newcommand{\draftonly}[1]{\if@draftmode#1\fi}
+\providecommand{\journalonly}[1]{\if@journalmode#1\fi}
+\providecommand{\arxivonly}[1]{\if@arxivmode#1\fi}
+\providecommand{\draftonly}[1]{\if@draftmode#1\fi}
 
 %% Enhanced mathematical operators
 \DeclareMathOperator{\grad}{grad}
 \DeclareMathOperator{\curl}{curl}
 \DeclareMathOperator{\divg}{div}
-\DeclareMathOperator{\tr}{tr}
-\DeclareMathOperator{\rank}{rank}
 
-%% Physics-specific commands
-\newcommand{\vect}[1]{\boldsymbol{#1}}
-\newcommand{\uvect}[1]{\hat{\boldsymbol{#1}}}
-\newcommand{\abs}[1]{\left|#1\right|}
-\newcommand{\norm}[1]{\left\|#1\right\|}
-\newcommand{\braket}[2]{\langle #1 | #2 \rangle}
-\newcommand{\ket}[1]{|#1\rangle}
-\newcommand{\bra}[1]{\langle#1|}
+%% Basic physics commands
+\providecommand{\vect}[1]{\boldsymbol{#1}}
+\providecommand{\abs}[1]{\left|#1\right|}
+\providecommand{\norm}[1]{\left\|#1\right\|}
 
-%% Derivatives
-\newcommand{\dd}[2]{\frac{d#1}{d#2}}
-\newcommand{\ddd}[2]{\frac{d^2#1}{d#2^2}}
-\newcommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
-\newcommand{\pdd}[2]{\frac{\partial^2#1}{\partial#2^2}}
+%% Basic derivatives
+\providecommand{\dd}[2]{\frac{d#1}{d#2}}
+\providecommand{\pd}[2]{\frac{\partial#1}{\partial#2}}
